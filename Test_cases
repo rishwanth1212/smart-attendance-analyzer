@@ -1,0 +1,37 @@
+Positive / Normal Test Cases
+Input (attendance.csv):
+StudentName,TotalClasses,ClassesAttended
+David Lee,20,20
+Eva Green,25,24
+Expected Output / Behavior:
+​low_attendance_count is 0.
+​All students marked as "Safe".
+​Summary report exports successfully with 0 shortages
+2. Edge Cases
+TC-03: Zero Total Classes (Division by Zero Protection)
+Input (attendance.csv):
+StudentName,TotalClasses,ClassesAttended
+Frank White,0,0
+Expected Output / Behavior:
+​Handles total > 0 condition safely without raising a ZeroDivisionError.
+​Sets percentage to 0 and status appropriately.
+TC-04: Empty CSV File (Headers Only)
+Input (attendance.csv):
+StudentName,TotalClasses,ClassesAttended
+Expected Output / Behavior:
+​Executes without crashing.
+​Total Students Analyzed: 0 is printed.
+​Generates an output CSV containing only the header row
+3. Negative & Error Handling Test Cases
+​TC-05: Missing Input File
+​Input: Call analyze_attendance(input_filename="non_existent.csv") when the file does not exist.
+​Expected Output / Behavior:
+​Triggers os.path.exists() check.
+​Prints error message: Error: Could not find 'non_existent.csv'. Please....
+​Exits the function gracefully via return without crashing.
+​4. Parameter Customization Test Cases
+​TC-06: Custom Input and Output File Names
+​Input: Call analyze_attendance(input_filename="custom_attendance.csv", output_filename="custom_summary.csv").
+​Expected Output / Behavior:
+​Reads from custom_attendance.csv instead of the default file.
+​Writes the final report to custom_summary.csv instead of the default summary name.
