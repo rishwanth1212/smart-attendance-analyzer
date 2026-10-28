@@ -1,0 +1,17 @@
+=================================================================
+          SMART ATTENDANCE ANALYZER - REPORT          
+=================================================================
+Student Name              | Total  | Attended | %      | Status
+-----------------------------------------------------------------
+Rishwanthgoud Angoli      | 30     | 28       | 93.33% | Safe
+Rahul Sharma              | 30     | 21       | 70.0% | Shortage (< 75%)
+Priya Patel               | 30     | 25       | 83.33% | Safe
+Amit Kumar                | 30     | 20       | 66.67% | Shortage (< 75%)
+Neha Singh                | 30     | 29       | 96.67% | Safe
+-----------------------------------------------------------------
+Total Students Analyzed: 5
+Students with Attendance Shortage: 2
+=================================================================
+Summary report successfully exported to 'attendance_summary.csv'
+
+PS C:\Users\ALL AtoZ\OneDrive\Desktop\smart-attendance-analyzer> 
